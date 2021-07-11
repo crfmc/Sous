@@ -1,0 +1,22 @@
+{
+  "name": "sous",
+  "version": "1.0.0",
+  "description": "The kitchen assistant",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crfmc/Sous.git"
+  },
+  "author": "Cesar Ferreyra-Mansilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crfmc/Sous/issues"
+  },
+  "homepage": "https://github.com/crfmc/Sous#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
