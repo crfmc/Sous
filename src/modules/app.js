@@ -13,47 +13,15 @@ import Action from "./modules/actions/Action.js";
  * Step variables are named after the action.
  */
 
-// instantiate necessary tools
-const pot = new Tool('Pot');
-const cooktop = new Tool('Cooktop');
-
-// Instantiate necessary ingredients
-const water = new Ingredient('water');
-const salt = new Ingredient('salt');
-
-
-// Instantiate necessary steps
-// const pour = new Step([pot], [water], "pour water into pot");
-// const season = new Step([pot], [salt], "add salt into pot");
-// const heat = new Step([pot, cooktop], [], "place pot of water on cooktop");
-// const wait = new Step([], [], "wait 5 minutes");
-
-// const r1 = new Recipe('boiled water', '5', [water, salt], [pour, season, heat, wait], [pot, cooktop]);
-
-//  Here design the interface for Sous
-
-
-// console.log(r1.phrase);
+// let root = document.getElementById("root")
   
-// Here I will test to make sure Recipe objects work correctly
+// root.innerHTML =
+//   "<h1>" + recipe_test.name + "</h1>" +
+//   "<h3>" + recipe_test.phrase + "</h3>";
 
-let recipe_test = new Recipe(
-  "Boiled Water",
-  [
-    new Pour(water).in(pot),
-    new Heat(water).for(10).in(cooktop)
-  ]
-);
-
-let root = document.getElementById("root")
-  
-root.innerHTML =
-  "<h1>" + recipe_test.name + "</h1>" +
-  "<h3>" + recipe_test.phrase + "</h3>";
-
-recipe_test.actions.forEach((action, i) =>
-{
-  root.innerHTML +=
-    "<h4> Step " + i + " <h4/>" +
-    "<p>" + action.phrase() + "</p>"
-})
+// recipe_test.actions.forEach((action, i) =>
+// {
+//   root.innerHTML +=
+//     "<h4> Step " + i + " <h4/>" +
+//     "<p>" + action.phrase() + "</p>"
+// })
