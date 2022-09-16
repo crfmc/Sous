@@ -1,5 +1,8 @@
 body {
-  background-color: white;
+  background-color: #ffffff;
+}
+body.night {
+  background-color: rgba(0, 51, 96, 0.8705882353);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,10 @@
+$RegBG: #ffffff;
+$NightBG: #003360de;
+
 body {
-  background-color: white;
+  background-color: $RegBG;
+
+  &.night {
+    background-color: $NightBG;
+  }
 }
