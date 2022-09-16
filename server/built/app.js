@@ -628,6 +628,6 @@ var require_dist = __commonJS({
 var { h, Fragment } = require_preact();
 var render = require_dist();
 var Client = () => {
-  return /* @__PURE__ */ h("div", null, "Hello Muddah");
+  return /* @__PURE__ */ h("div", null, "Hi there! I'm Sous.");
 };
 module.exports.client = render(/* @__PURE__ */ h(Client, null));

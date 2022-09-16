@@ -16,7 +16,7 @@ const render = require('preact-render-to-string');
 const Client = () => {
     return (
         <div>
-            Hello Muddah
+            Hi there! I'm Sous.
         </div>
     )
 }
