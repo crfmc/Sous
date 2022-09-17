@@ -7,7 +7,8 @@
     "test": "jest",
     "build": "babel src/scripts -d public/js",
     "esbuild": "esbuild src/scripts/App.jsx --jsx-factory=h --jsx-fragment=Fragment --bundle --outfile=public/js/app.js",
-    "watch": "watch 'npm run esbuild' ./src"
+    "watch": "watch 'npm run esbuild' ./src",
+    "sass": "sass --watch ./src/styles/sass/styles.scss ./public/styles/styles.css"
   },
   "repository": {
     "type": "git",
@@ -20,15 +21,11 @@
   },
   "homepage": "https://github.com/crfmc/Sous#readme",
   "devDependencies": {
-    "@babel/cli": "^7.18.10",
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
     "jest": "^27.0.6",
     "watch": "^0.13.0"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.18.10",
-    "esbuild": "^0.15.5",
+    "conc": "^0.0.3",
     "preact": "^10.10.6",
     "sass": "^1.54.4"
   }
