@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "babel src/scripts -d public/js",
-    "esbuild": "esbuild src/scripts/App.jsx --jsx-factory=h --jsx-fragment=Fragment --bundle --outfile=public/js/app.js",
+    "esbuild": "esbuild src/App.jsx --jsx-factory=h --jsx-fragment=Fragment --bundle --outfile=public/js/app.js",
     "watch": "watch 'npm run esbuild' ./src",
     "sass": "sass --watch ./src/styles/sass/styles.scss ./public/styles/styles.css"
   },

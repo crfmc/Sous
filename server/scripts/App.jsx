@@ -4,19 +4,14 @@ const render = require('preact-render-to-string');
 
 // import Inventory from "inventory"
 
+const { App2 } = require('./components/App2');
 
-// const App = () => {
-//     return (
-//         <button>
-//             Hello world! Let's get started
-//         </button>
-//     )
-// }
 
 const Client = () => {
     return (
         <div>
             Hi there! I'm Sous.
+            <App2 />
         </div>
     )
 }

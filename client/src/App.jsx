@@ -1,5 +1,5 @@
 import { h, Component, hydrate } from 'preact';
-import App2 from './components/App2';
+import App2 from '../public/js/components/App2';
 
 const App = () => {
     return (

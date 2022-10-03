@@ -1,7 +1,26 @@
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __esm = (fn, res) => function __init() {
+  return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
+};
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // node_modules/preact/dist/preact.js
 var require_preact = __commonJS({
@@ -38,7 +57,7 @@ var require_preact = __commonJS({
       var f2 = { type: n2, props: t2, key: i2, ref: o2, __k: null, __: null, __b: 0, __e: null, __d: void 0, __c: null, __h: null, constructor: void 0, __v: null == r2 ? ++u : r2 };
       return null == r2 && null != l.vnode && l.vnode(f2), f2;
     }
-    function h2(n2) {
+    function h3(n2) {
       return n2.children;
     }
     function y(n2, l2) {
@@ -78,7 +97,7 @@ var require_preact = __commonJS({
     function b(n2, l2, u2, t2, i2, o2, r2, c2, s2, a2) {
       var p2, y2, _2, k2, x2, b2, m2, A2 = t2 && t2.__k || e, C2 = A2.length;
       for (u2.__k = [], p2 = 0; p2 < l2.length; p2++)
-        if (null != (k2 = u2.__k[p2] = null == (k2 = l2[p2]) || "boolean" == typeof k2 ? null : "string" == typeof k2 || "number" == typeof k2 || "bigint" == typeof k2 ? v(null, k2, null, null, k2) : Array.isArray(k2) ? v(h2, { children: k2 }, null, null, null) : k2.__b > 0 ? v(k2.type, k2.props, k2.key, k2.ref ? k2.ref : null, k2.__v) : k2)) {
+        if (null != (k2 = u2.__k[p2] = null == (k2 = l2[p2]) || "boolean" == typeof k2 ? null : "string" == typeof k2 || "number" == typeof k2 || "bigint" == typeof k2 ? v(null, k2, null, null, k2) : Array.isArray(k2) ? v(h3, { children: k2 }, null, null, null) : k2.__b > 0 ? v(k2.type, k2.props, k2.key, k2.ref ? k2.ref : null, k2.__v) : k2)) {
           if (k2.__ = u2, k2.__b = u2.__b + 1, null === (_2 = A2[p2]) || _2 && k2.key == _2.key && k2.type === _2.type)
             A2[p2] = void 0;
           else
@@ -189,7 +208,7 @@ var require_preact = __commonJS({
               do {
                 p2.__d = false, A2 && A2(u2), a2 = p2.render(p2.props, p2.state, p2.context), p2.state = p2.__s;
               } while (p2.__d && ++C2 < 25);
-            p2.state = p2.__s, null != p2.getChildContext && (i2 = s(s({}, i2), p2.getChildContext())), v2 || null == p2.getSnapshotBeforeUpdate || (k2 = p2.getSnapshotBeforeUpdate(d2, _2)), $2 = null != a2 && a2.type === h2 && null == a2.key ? a2.props.children : a2, b(n2, Array.isArray($2) ? $2 : [$2], u2, t2, i2, o2, r2, f2, e2, c2), p2.base = u2.__e, u2.__h = null, p2.__h.length && f2.push(p2), x2 && (p2.__E = p2.__ = null), p2.__e = false;
+            p2.state = p2.__s, null != p2.getChildContext && (i2 = s(s({}, i2), p2.getChildContext())), v2 || null == p2.getSnapshotBeforeUpdate || (k2 = p2.getSnapshotBeforeUpdate(d2, _2)), $2 = null != a2 && a2.type === h3 && null == a2.key ? a2.props.children : a2, b(n2, Array.isArray($2) ? $2 : [$2], u2, t2, i2, o2, r2, f2, e2, c2), p2.base = u2.__e, u2.__h = null, p2.__h.length && f2.push(p2), x2 && (p2.__E = p2.__ = null), p2.__e = false;
           } else
             null == r2 && u2.__v === t2.__v ? (u2.__k = t2.__k, u2.__e = t2.__e) : u2.__e = j(t2.__e, u2, t2, i2, o2, r2, f2, c2);
         (a2 = l.diffed) && a2(u2);
@@ -209,7 +228,7 @@ var require_preact = __commonJS({
       });
     }
     function j(l2, u2, t2, i2, o2, r2, e2, c2) {
-      var s2, p2, v2, h3 = t2.props, y2 = u2.props, _2 = u2.type, k2 = 0;
+      var s2, p2, v2, h4 = t2.props, y2 = u2.props, _2 = u2.type, k2 = 0;
       if ("svg" === _2 && (o2 = true), null != r2) {
         for (; k2 < r2.length; k2++)
           if ((s2 = r2[k2]) && "setAttribute" in s2 == !!_2 && (_2 ? s2.localName === _2 : 3 === s2.nodeType)) {
@@ -223,20 +242,20 @@ var require_preact = __commonJS({
         l2 = o2 ? document.createElementNS("http://www.w3.org/2000/svg", _2) : document.createElement(_2, y2.is && y2), r2 = null, c2 = false;
       }
       if (null === _2)
-        h3 === y2 || c2 && l2.data === y2 || (l2.data = y2);
+        h4 === y2 || c2 && l2.data === y2 || (l2.data = y2);
       else {
-        if (r2 = r2 && n.call(l2.childNodes), p2 = (h3 = t2.props || f).dangerouslySetInnerHTML, v2 = y2.dangerouslySetInnerHTML, !c2) {
+        if (r2 = r2 && n.call(l2.childNodes), p2 = (h4 = t2.props || f).dangerouslySetInnerHTML, v2 = y2.dangerouslySetInnerHTML, !c2) {
           if (null != r2)
-            for (h3 = {}, k2 = 0; k2 < l2.attributes.length; k2++)
-              h3[l2.attributes[k2].name] = l2.attributes[k2].value;
+            for (h4 = {}, k2 = 0; k2 < l2.attributes.length; k2++)
+              h4[l2.attributes[k2].name] = l2.attributes[k2].value;
           (v2 || p2) && (v2 && (p2 && v2.__html == p2.__html || v2.__html === l2.innerHTML) || (l2.innerHTML = v2 && v2.__html || ""));
         }
-        if (m(l2, y2, h3, o2, c2), v2)
+        if (m(l2, y2, h4, o2, c2), v2)
           u2.__k = [];
         else if (k2 = u2.props.children, b(l2, Array.isArray(k2) ? k2 : [k2], u2, t2, i2, o2 && "foreignObject" !== _2, r2, e2, r2 ? r2[0] : t2.__k && d(t2, 0), c2), null != r2)
           for (k2 = r2.length; k2--; )
             null != r2[k2] && a(r2[k2]);
-        c2 || ("value" in y2 && void 0 !== (k2 = y2.value) && (k2 !== l2.value || "progress" === _2 && !k2 || "option" === _2 && k2 !== h3.value) && C(l2, "value", k2, h3.value, false), "checked" in y2 && void 0 !== (k2 = y2.checked) && k2 !== l2.checked && C(l2, "checked", k2, h3.checked, false));
+        c2 || ("value" in y2 && void 0 !== (k2 = y2.value) && (k2 !== l2.value || "progress" === _2 && !k2 || "option" === _2 && k2 !== h4.value) && C(l2, "value", k2, h4.value, false), "checked" in y2 && void 0 !== (k2 = y2.checked) && k2 !== l2.checked && C(l2, "checked", k2, h4.checked, false));
       }
       return l2;
     }
@@ -268,7 +287,7 @@ var require_preact = __commonJS({
     }
     function N(u2, t2, i2) {
       var o2, r2, e2;
-      l.__ && l.__(u2, t2), r2 = (o2 = "function" == typeof i2) ? null : i2 && i2.__k || t2.__k, e2 = [], I(t2, u2 = (!o2 && i2 || t2).__k = p(h2, null, [u2]), r2 || f, f, void 0 !== t2.ownerSVGElement, !o2 && i2 ? [i2] : r2 ? null : t2.firstChild ? n.call(t2.childNodes) : null, e2, !o2 && i2 ? i2 : r2 ? r2.__e : t2.firstChild, o2), T(e2, u2);
+      l.__ && l.__(u2, t2), r2 = (o2 = "function" == typeof i2) ? null : i2 && i2.__k || t2.__k, e2 = [], I(t2, u2 = (!o2 && i2 || t2).__k = p(h3, null, [u2]), r2 || f, f, void 0 !== t2.ownerSVGElement, !o2 && i2 ? [i2] : r2 ? null : t2.firstChild ? n.call(t2.childNodes) : null, e2, !o2 && i2 ? i2 : r2 ? r2.__e : t2.firstChild, o2), T(e2, u2);
     }
     n = e.slice, l = { __e: function(n2, l2, u2, t2) {
       for (var i2, o2, r2; l2 = l2.__; )
@@ -287,7 +306,7 @@ var require_preact = __commonJS({
       u2 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = s({}, this.state), "function" == typeof n2 && (n2 = n2(s({}, u2), this.props)), n2 && s(u2, n2), null != n2 && this.__v && (l2 && this.__h.push(l2), k(this));
     }, y.prototype.forceUpdate = function(n2) {
       this.__v && (this.__e = true, n2 && this.__h.push(n2), k(this));
-    }, y.prototype.render = h2, i = [], x.__r = 0, r = 0, exports2.Component = y, exports2.Fragment = h2, exports2.cloneElement = function(l2, u2, t2) {
+    }, y.prototype.render = h3, i = [], x.__r = 0, r = 0, exports2.Component = y, exports2.Fragment = h3, exports2.cloneElement = function(l2, u2, t2) {
       var i2, o2, r2, f2 = s({}, l2.props);
       for (r2 in u2)
         "key" == r2 ? i2 = u2[r2] : "ref" == r2 ? o2 = u2[r2] : f2[r2] = u2[r2];
@@ -376,7 +395,7 @@ var require_commonjs = __commonJS({
         var n2 = e2.contextType, r2 = n2 && t2[n2.__c];
         return null != n2 ? r2 ? r2.props.value : n2.__ : t2;
       }
-      var h2 = [];
+      var h3 = [];
       function y(e2, n2, s2, u2, p2, d2) {
         if (null == e2 || "boolean" == typeof e2)
           return "";
@@ -409,12 +428,12 @@ var require_commonjs = __commonJS({
           w2 = (S2 = w2).displayName || S2 !== Function && S2.name || function(e3) {
             var t2 = (Function.prototype.toString.call(e3).match(/^\s*function\s+([^( ]+)/) || "")[1];
             if (!t2) {
-              for (var n3 = -1, r2 = h2.length; r2--; )
-                if (h2[r2] === e3) {
+              for (var n3 = -1, r2 = h3.length; r2--; )
+                if (h3[r2] === e3) {
                   n3 = r2;
                   break;
                 }
-              n3 < 0 && (n3 = h2.push(e3) - 1), t2 = "UnnamedComponent" + n3;
+              n3 < 0 && (n3 = h3.push(e3) - 1), t2 = "UnnamedComponent" + n3;
             }
             return t2;
           }(S2);
@@ -556,8 +575,8 @@ var require_commonjs = __commonJS({
             var d2 = e2.__c;
             d2.getChildContext && (n2 = O({}, n2, d2.getChildContext()));
           }
-          var h3 = j(_2, n2, i2, s2, e2);
-          return t.options.diffed && t.options.diffed(e2), e2.__ = void 0, t.options.unmount && t.options.unmount(e2), h3;
+          var h4 = j(_2, n2, i2, s2, e2);
+          return t.options.diffed && t.options.diffed(e2), e2.__ = void 0, t.options.unmount && t.options.unmount(e2), h4;
         }
         var y2, m2, b2 = "<";
         if (b2 += p2, c2)
@@ -624,10 +643,33 @@ var require_dist = __commonJS({
   }
 });
 
+// scripts/components/App2.jsx
+var App2_exports = {};
+__export(App2_exports, {
+  default: () => App2
+});
+var h, Component, App2;
+var init_App2 = __esm({
+  "scripts/components/App2.jsx"() {
+    ({ h, Component } = require_preact());
+    App2 = class extends Component {
+      constructor() {
+        super();
+      }
+      render() {
+        return /* @__PURE__ */ h("button", {
+          onClick: () => console.log("hello")
+        }, "HELLOxczasasas");
+      }
+    };
+  }
+});
+
 // scripts/App.jsx
-var { h, Fragment } = require_preact();
+var { h: h2, Fragment } = require_preact();
 var render = require_dist();
+var { App2: App22 } = (init_App2(), __toCommonJS(App2_exports));
 var Client = () => {
-  return /* @__PURE__ */ h("div", null, "Hi there! I'm Sous.");
+  return /* @__PURE__ */ h2("div", null, "Hi there! I'm Sous.", /* @__PURE__ */ h2(App22, null));
 };
-module.exports.client = render(/* @__PURE__ */ h(Client, null));
+module.exports.client = render(/* @__PURE__ */ h2(Client, null));

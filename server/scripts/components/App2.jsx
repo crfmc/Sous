@@ -6,6 +6,6 @@ export default class App2 extends Component {
   }
 
   render() {
-    return <button onClick={() => console.log('hello')}>HELLO</button>;
+    return <button onClick={() => console.log('hello')}>HELLOxczasasas</button>;
   }
 }
