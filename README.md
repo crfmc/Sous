@@ -16,4 +16,6 @@ SSR I chose to go with server side rendering because it would only make sense to
 
 I began, simply, by injecting the bundled scripts into an HTML file using the fs library. In order to get this to work I had to use the preact-render-to-string library, which renders Preact's JSX, which translates to HTML, then made into a string that we can inject.
 
-Then I needed a way to use events, and several other features of the browser API. Working on that now!
+Then I needed a way to use events, and several other features of the browser API.
+
+## Design Journey
