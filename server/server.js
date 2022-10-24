@@ -17,9 +17,9 @@ app.use('/', express.static(public));
 
 // App landing
 app.get('/', (req, res) => {
-  const { client } = require('./built/app.js');
+  const { app } = require('./dist/AppServer.js');
   const index = fs.readFileSync('../client/public/sous.html', 'utf-8');
-  const finalHtml = index.replace('<!-- ::APP:: -->', client);
+  const finalHtml = index.replace('<!-- ::APP:: -->', app);
   res.sendFile(path.join(public, 'sous.html'));
   res.send(finalHtml);
 });
