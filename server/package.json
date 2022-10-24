@@ -4,8 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "esbuild-client": "npm --prefix ../client/ run esbuild",
-    "esbuild": "esbuild scripts/App.jsx --bundle --platform=node --outfile=built/app.js --jsx-factory=h --jsx-fragment=Fragment",
+    "esbuild": "node esbuild-server.config.js",
     "nodemon": "nodemon --watch scripts server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently \"npm:esbuild\" \"npm:nodemon\" "
