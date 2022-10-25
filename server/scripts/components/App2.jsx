@@ -1,4 +1,4 @@
-const { h, Component } = require('preact');
+import { h, Component } from 'preact';
 
 export default class App2 extends Component {
   constructor() {
@@ -6,6 +6,6 @@ export default class App2 extends Component {
   }
 
   render() {
-    return <button onClick={() => console.log('hello')}>HELLOxczasasas</button>;
+    return <button>SERVER HELLO</button>;
   }
 }
