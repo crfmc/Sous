@@ -1,14 +1,13 @@
 require('esbuild').buildSync({
     entryPoints: {
-        hydrate: './src/hydrate.js',
+        hydrate: './src/hydrate.jsx',
         App2Client: '../server/scripts/components/App2.jsx',
         AppClient: '../server/scripts/App.jsx',
     },
     bundle: true,
-    minify: false,
     sourcemap: true,
     outdir: 'public/js',
-    platform: "node",
+    platform: "browser",
     jsxFactory: "h",
     jsxFragment: "Fragment",
     allowOverwrite: true,
