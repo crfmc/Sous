@@ -1,19 +1,17 @@
-const { h, Fragment } = require('preact');
-const render = require('preact-render-to-string');
+import { h, Fragment } from 'preact';
 /** @jsx h */
 
 // import Inventory from "inventory"
 
-const { App2 } = require('./components/App2');
+// const { App2 } = require('./components/App2');
 
 
-const Client = () => {
+export const App = () => {
     return (
-        <div>
+        <Fragment>
             Hi there! I'm Sous.
-            <App2 />
-        </div>
+            <button onClick={() => console.log('wosdfaeo!!!!')}>Server stuff here!</button>
+            {/* <App2 /> */}
+        </Fragment>
     )
 }
-
-module.exports.client = render(<Client />);
