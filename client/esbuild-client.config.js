@@ -1,8 +1,8 @@
 require('esbuild').buildSync({
     entryPoints: {
-        hydrate: './src/hydrate.jsx',
         App2Client: '../server/scripts/components/App2.jsx',
         AppClient: '../server/scripts/App.jsx',
+        hydrate: './src/hydrate.jsx',
     },
     bundle: true,
     sourcemap: true,
