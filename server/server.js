@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const preactRender = require('preact-render-to-string');
 
 const app = express();
 const public = path.join(__dirname, '../client/public');
@@ -17,9 +18,9 @@ app.use('/', express.static(public));
 
 // App landing
 app.get('/', (req, res) => {
-  const { app } = require('./dist/AppServer.js');
+  const { App } = require('./dist/AppServer.js');
   const index = fs.readFileSync('../client/public/sous.html', 'utf-8');
-  const finalHtml = index.replace('<!-- ::APP:: -->', app);
+  const finalHtml = index.replace('<!-- ::APP:: -->', preactRender(App()));
   res.sendFile(path.join(public, 'sous.html'));
   res.send(finalHtml);
 });
