@@ -4,11 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "esbuild-server": "node esbuild-server.config.js",
-    "esbuild-client": "npm --prefix ../client run build",
+    "esbuild": "node esbuild-server.config.js",
     "nodemon": "nodemon --watch scripts server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm:esbuild-server\" \"npm:esbuild-client\" \" nodemon --watch './scripts/*' \""
+    "dev": "concurrently \"npm:esbuild\" \"npm:nodemon\" "
   },
   "author": "",
   "license": "ISC",

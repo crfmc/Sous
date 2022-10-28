@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "jest",
-    "build": "node esbuild-client.config.js",
+    "build": "babel src/scripts -d public/js",
     "esbuild": "node esbuild-client.config.js",
     "watch": "watch 'node esbuild-client.config.js' ./src",
     "sass": "sass --watch ./src/styles/sass/styles.scss ./public/styles/style.css"
