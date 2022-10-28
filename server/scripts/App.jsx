@@ -9,8 +9,8 @@ import { h, Fragment } from 'preact';
 export const App = () => {
     return (
         <Fragment>
-            Hi there! I'm Sous.
-            <button onClick={() => console.log('wosdfaeo!!!!')}>Server stuff here!</button>
+            Hi there, I'm Sous.
+            <button onClick={() => console.log('test11!!!!')}>Server stuff here!</button>
             {/* <App2 /> */}
         </Fragment>
     )

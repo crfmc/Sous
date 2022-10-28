@@ -71,7 +71,7 @@ function g() {
 function w(n3, l3, u3, i3, t3, o3, r3, c3, s3, a3) {
   var h3, y, d3, k3, b3, g3, w3, x = i3 && i3.__k || e, C3 = x.length;
   for (u3.__k = [], h3 = 0; h3 < l3.length; h3++)
-    if (null != (k3 = u3.__k[h3] = null == (k3 = l3[h3]) || "boolean" == typeof k3 ? null : "string" == typeof k3 || "number" == typeof k3 || "bigint" == typeof k3 ? v(null, k3, null, null, k3) : Array.isArray(k3) ? v(p, { children: k3 }, null, null, null) : k3.__b > 0 ? v(k3.type, k3.props, k3.key, null, k3.__v) : k3)) {
+    if (null != (k3 = u3.__k[h3] = null == (k3 = l3[h3]) || "boolean" == typeof k3 ? null : "string" == typeof k3 || "number" == typeof k3 || "bigint" == typeof k3 ? v(null, k3, null, null, k3) : Array.isArray(k3) ? v(p, { children: k3 }, null, null, null) : k3.__b > 0 ? v(k3.type, k3.props, k3.key, k3.ref ? k3.ref : null, k3.__v) : k3)) {
       if (k3.__ = u3, k3.__b = u3.__b + 1, null === (d3 = x[h3]) || d3 && k3.key == d3.key && k3.type === d3.type)
         x[h3] = void 0;
       else
@@ -85,7 +85,7 @@ function w(n3, l3, u3, i3, t3, o3, r3, c3, s3, a3) {
       j(n3, k3, d3 = d3 || f, t3, o3, r3, c3, s3, a3), b3 = k3.__e, (y = k3.ref) && d3.ref != y && (w3 || (w3 = []), d3.ref && w3.push(d3.ref, null, k3), w3.push(y, k3.__c || b3, k3)), null != b3 ? (null == g3 && (g3 = b3), "function" == typeof k3.type && k3.__k === d3.__k ? k3.__d = s3 = m(k3, s3, n3) : s3 = A(n3, k3, d3, x, b3, s3), "function" == typeof u3.type && (u3.__d = s3)) : s3 && d3.__e == s3 && s3.parentNode != n3 && (s3 = _(d3));
     }
   for (u3.__e = g3, h3 = C3; h3--; )
-    null != x[h3] && ("function" == typeof u3.type && null != x[h3].__e && x[h3].__e == u3.__d && (u3.__d = _(i3, h3 + 1)), N(x[h3], x[h3]));
+    null != x[h3] && N(x[h3], x[h3]);
   if (w3)
     for (h3 = 0; h3 < w3.length; h3++)
       M(w3[h3], w3[++h3], w3[++h3]);
@@ -146,7 +146,7 @@ function H(n3, l3, u3, i3, t3) {
           break n;
         } catch (n4) {
         }
-      "function" == typeof u3 || (null != u3 && (false !== u3 || "a" === l3[0] && "r" === l3[1]) ? n3.setAttribute(l3, u3) : n3.removeAttribute(l3));
+      "function" == typeof u3 || (null == u3 || false === u3 && -1 == l3.indexOf("-") ? n3.removeAttribute(l3) : n3.setAttribute(l3, u3));
     }
 }
 function I(n3) {
@@ -156,33 +156,37 @@ function T(n3) {
   this.l[n3.type + true](l.event ? l.event(n3) : n3);
 }
 function j(n3, u3, i3, t3, o3, r3, f3, e3, c3) {
-  var a3, h3, v3, y, _3, k3, b3, g3, m3, x, A3, C3, $3, H3 = u3.type;
+  var a3, h3, v3, y, _3, k3, b3, g3, m3, x, A3, C3, $3, H3, I3, T3 = u3.type;
   if (void 0 !== u3.constructor)
     return null;
   null != i3.__h && (c3 = i3.__h, e3 = u3.__e = i3.__e, u3.__h = null, r3 = [e3]), (a3 = l.__b) && a3(u3);
   try {
     n:
-      if ("function" == typeof H3) {
-        if (g3 = u3.props, m3 = (a3 = H3.contextType) && t3[a3.__c], x = a3 ? m3 ? m3.props.value : a3.__ : t3, i3.__c ? b3 = (h3 = u3.__c = i3.__c).__ = h3.__E : ("prototype" in H3 && H3.prototype.render ? u3.__c = h3 = new H3(g3, x) : (u3.__c = h3 = new d(g3, x), h3.constructor = H3, h3.render = O), m3 && m3.sub(h3), h3.props = g3, h3.state || (h3.state = {}), h3.context = x, h3.__n = t3, v3 = h3.__d = true, h3.__h = []), null == h3.__s && (h3.__s = h3.state), null != H3.getDerivedStateFromProps && (h3.__s == h3.state && (h3.__s = s({}, h3.__s)), s(h3.__s, H3.getDerivedStateFromProps(g3, h3.__s))), y = h3.props, _3 = h3.state, v3)
-          null == H3.getDerivedStateFromProps && null != h3.componentWillMount && h3.componentWillMount(), null != h3.componentDidMount && h3.__h.push(h3.componentDidMount);
+      if ("function" == typeof T3) {
+        if (g3 = u3.props, m3 = (a3 = T3.contextType) && t3[a3.__c], x = a3 ? m3 ? m3.props.value : a3.__ : t3, i3.__c ? b3 = (h3 = u3.__c = i3.__c).__ = h3.__E : ("prototype" in T3 && T3.prototype.render ? u3.__c = h3 = new T3(g3, x) : (u3.__c = h3 = new d(g3, x), h3.constructor = T3, h3.render = O), m3 && m3.sub(h3), h3.props = g3, h3.state || (h3.state = {}), h3.context = x, h3.__n = t3, v3 = h3.__d = true, h3.__h = [], h3._sb = []), null == h3.__s && (h3.__s = h3.state), null != T3.getDerivedStateFromProps && (h3.__s == h3.state && (h3.__s = s({}, h3.__s)), s(h3.__s, T3.getDerivedStateFromProps(g3, h3.__s))), y = h3.props, _3 = h3.state, v3)
+          null == T3.getDerivedStateFromProps && null != h3.componentWillMount && h3.componentWillMount(), null != h3.componentDidMount && h3.__h.push(h3.componentDidMount);
         else {
-          if (null == H3.getDerivedStateFromProps && g3 !== y && null != h3.componentWillReceiveProps && h3.componentWillReceiveProps(g3, x), !h3.__e && null != h3.shouldComponentUpdate && false === h3.shouldComponentUpdate(g3, h3.__s, x) || u3.__v === i3.__v) {
-            h3.props = g3, h3.state = h3.__s, u3.__v !== i3.__v && (h3.__d = false), h3.__v = u3, u3.__e = i3.__e, u3.__k = i3.__k, u3.__k.forEach(function(n4) {
+          if (null == T3.getDerivedStateFromProps && g3 !== y && null != h3.componentWillReceiveProps && h3.componentWillReceiveProps(g3, x), !h3.__e && null != h3.shouldComponentUpdate && false === h3.shouldComponentUpdate(g3, h3.__s, x) || u3.__v === i3.__v) {
+            for (h3.props = g3, h3.state = h3.__s, u3.__v !== i3.__v && (h3.__d = false), h3.__v = u3, u3.__e = i3.__e, u3.__k = i3.__k, u3.__k.forEach(function(n4) {
               n4 && (n4.__ = u3);
-            }), h3.__h.length && f3.push(h3);
+            }), A3 = 0; A3 < h3._sb.length; A3++)
+              h3.__h.push(h3._sb[A3]);
+            h3._sb = [], h3.__h.length && f3.push(h3);
             break n;
           }
           null != h3.componentWillUpdate && h3.componentWillUpdate(g3, h3.__s, x), null != h3.componentDidUpdate && h3.__h.push(function() {
             h3.componentDidUpdate(y, _3, k3);
           });
         }
-        if (h3.context = x, h3.props = g3, h3.__v = u3, h3.__P = n3, A3 = l.__r, C3 = 0, "prototype" in H3 && H3.prototype.render)
-          h3.state = h3.__s, h3.__d = false, A3 && A3(u3), a3 = h3.render(h3.props, h3.state, h3.context);
-        else
+        if (h3.context = x, h3.props = g3, h3.__v = u3, h3.__P = n3, C3 = l.__r, $3 = 0, "prototype" in T3 && T3.prototype.render) {
+          for (h3.state = h3.__s, h3.__d = false, C3 && C3(u3), a3 = h3.render(h3.props, h3.state, h3.context), H3 = 0; H3 < h3._sb.length; H3++)
+            h3.__h.push(h3._sb[H3]);
+          h3._sb = [];
+        } else
           do {
-            h3.__d = false, A3 && A3(u3), a3 = h3.render(h3.props, h3.state, h3.context), h3.state = h3.__s;
-          } while (h3.__d && ++C3 < 25);
-        h3.state = h3.__s, null != h3.getChildContext && (t3 = s(s({}, t3), h3.getChildContext())), v3 || null == h3.getSnapshotBeforeUpdate || (k3 = h3.getSnapshotBeforeUpdate(y, _3)), $3 = null != a3 && a3.type === p && null == a3.key ? a3.props.children : a3, w(n3, Array.isArray($3) ? $3 : [$3], u3, i3, t3, o3, r3, f3, e3, c3), h3.base = u3.__e, u3.__h = null, h3.__h.length && f3.push(h3), b3 && (h3.__E = h3.__ = null), h3.__e = false;
+            h3.__d = false, C3 && C3(u3), a3 = h3.render(h3.props, h3.state, h3.context), h3.state = h3.__s;
+          } while (h3.__d && ++$3 < 25);
+        h3.state = h3.__s, null != h3.getChildContext && (t3 = s(s({}, t3), h3.getChildContext())), v3 || null == h3.getSnapshotBeforeUpdate || (k3 = h3.getSnapshotBeforeUpdate(y, _3)), I3 = null != a3 && a3.type === p && null == a3.key ? a3.props.children : a3, w(n3, Array.isArray(I3) ? I3 : [I3], u3, i3, t3, o3, r3, f3, e3, c3), h3.base = u3.__e, u3.__h = null, h3.__h.length && f3.push(h3), b3 && (h3.__E = h3.__ = null), h3.__e = false;
       } else
         null == r3 && u3.__v === i3.__v ? (u3.__k = i3.__k, u3.__e = i3.__e) : u3.__e = L(i3.__e, u3, i3, t3, o3, r3, f3, c3);
     (a3 = l.diffed) && a3(u3);
@@ -249,12 +253,12 @@ function N(n3, u3, i3) {
       } catch (n4) {
         l.__e(n4, u3);
       }
-    t3.base = t3.__P = null;
+    t3.base = t3.__P = null, n3.__c = void 0;
   }
   if (t3 = n3.__k)
     for (o3 = 0; o3 < t3.length; o3++)
-      t3[o3] && N(t3[o3], u3, "function" != typeof n3.type);
-  i3 || null == n3.__e || a(n3.__e), n3.__e = n3.__d = void 0;
+      t3[o3] && N(t3[o3], u3, i3 || "function" != typeof n3.type);
+  i3 || null == n3.__e || a(n3.__e), n3.__ = n3.__e = n3.__d = void 0;
 }
 function O(n3, l3, u3) {
   return this.constructor(n3, u3);
@@ -280,7 +284,7 @@ n = e.slice, l = { __e: function(n3, l3, u3, i3) {
   return null != n3 && void 0 === n3.constructor;
 }, d.prototype.setState = function(n3, l3) {
   var u3;
-  u3 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = s({}, this.state), "function" == typeof n3 && (n3 = n3(s({}, u3), this.props)), n3 && s(u3, n3), null != n3 && this.__v && (l3 && this.__h.push(l3), b(this));
+  u3 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = s({}, this.state), "function" == typeof n3 && (n3 = n3(s({}, u3), this.props)), n3 && s(u3, n3), null != n3 && this.__v && (l3 && this._sb.push(l3), b(this));
 }, d.prototype.forceUpdate = function(n3) {
   this.__v && (this.__e = true, n3 && this.__h.push(n3), b(this));
 }, d.prototype.render = p, t = [], g.__r = 0, r = 0;
@@ -372,7 +376,7 @@ function w2(n22, l22, u22, i22, t22, o22, r22, c22, s22, a22) {
       j2(n22, k22, d22 = d22 || f2, t22, o22, r22, c22, s22, a22), b22 = k22.__e, (y = k22.ref) && d22.ref != y && (w22 || (w22 = []), d22.ref && w22.push(d22.ref, null, k22), w22.push(y, k22.__c || b22, k22)), null != b22 ? (null == g22 && (g22 = b22), "function" == typeof k22.type && k22.__k === d22.__k ? k22.__d = s22 = m2(k22, s22, n22) : s22 = A2(n22, k22, d22, x, b22, s22), "function" == typeof u22.type && (u22.__d = s22)) : s22 && d22.__e == s22 && s22.parentNode != n22 && (s22 = _2(d22));
     }
   for (u22.__e = g22, h22 = C22; h22--; )
-    null != x[h22] && ("function" == typeof u22.type && null != x[h22].__e && x[h22].__e == u22.__d && (u22.__d = _2(i22, h22 + 1)), N2(x[h22], x[h22]));
+    null != x[h22] && N2(x[h22], x[h22]);
   if (w22)
     for (h22 = 0; h22 < w22.length; h22++)
       M2(w22[h22], w22[++h22], w22[++h22]);
@@ -433,7 +437,7 @@ function H2(n22, l22, u22, i22, t22) {
           break n;
         } catch (n3) {
         }
-      "function" == typeof u22 || (null != u22 && (false !== u22 || "a" === l22[0] && "r" === l22[1]) ? n22.setAttribute(l22, u22) : n22.removeAttribute(l22));
+      "function" == typeof u22 || (null == u22 || false === u22 && -1 == l22.indexOf("-") ? n22.removeAttribute(l22) : n22.setAttribute(l22, u22));
     }
 }
 function I2(n22) {
@@ -443,33 +447,37 @@ function T2(n22) {
   this.l[n22.type + true](l2.event ? l2.event(n22) : n22);
 }
 function j2(n22, u22, i22, t22, o22, r22, f22, e22, c22) {
-  var a22, h22, v22, y, _22, k22, b22, g22, m22, x, A22, C22, $22, H22 = u22.type;
+  var a22, h22, v22, y, _22, k22, b22, g22, m22, x, A22, C22, $22, H22, I22, T22 = u22.type;
   if (void 0 !== u22.constructor)
     return null;
   null != i22.__h && (c22 = i22.__h, e22 = u22.__e = i22.__e, u22.__h = null, r22 = [e22]), (a22 = l2.__b) && a22(u22);
   try {
     n:
-      if ("function" == typeof H22) {
-        if (g22 = u22.props, m22 = (a22 = H22.contextType) && t22[a22.__c], x = a22 ? m22 ? m22.props.value : a22.__ : t22, i22.__c ? b22 = (h22 = u22.__c = i22.__c).__ = h22.__E : ("prototype" in H22 && H22.prototype.render ? u22.__c = h22 = new H22(g22, x) : (u22.__c = h22 = new d2(g22, x), h22.constructor = H22, h22.render = O2), m22 && m22.sub(h22), h22.props = g22, h22.state || (h22.state = {}), h22.context = x, h22.__n = t22, v22 = h22.__d = true, h22.__h = []), null == h22.__s && (h22.__s = h22.state), null != H22.getDerivedStateFromProps && (h22.__s == h22.state && (h22.__s = s2({}, h22.__s)), s2(h22.__s, H22.getDerivedStateFromProps(g22, h22.__s))), y = h22.props, _22 = h22.state, v22)
-          null == H22.getDerivedStateFromProps && null != h22.componentWillMount && h22.componentWillMount(), null != h22.componentDidMount && h22.__h.push(h22.componentDidMount);
+      if ("function" == typeof T22) {
+        if (g22 = u22.props, m22 = (a22 = T22.contextType) && t22[a22.__c], x = a22 ? m22 ? m22.props.value : a22.__ : t22, i22.__c ? b22 = (h22 = u22.__c = i22.__c).__ = h22.__E : ("prototype" in T22 && T22.prototype.render ? u22.__c = h22 = new T22(g22, x) : (u22.__c = h22 = new d2(g22, x), h22.constructor = T22, h22.render = O2), m22 && m22.sub(h22), h22.props = g22, h22.state || (h22.state = {}), h22.context = x, h22.__n = t22, v22 = h22.__d = true, h22.__h = [], h22._sb = []), null == h22.__s && (h22.__s = h22.state), null != T22.getDerivedStateFromProps && (h22.__s == h22.state && (h22.__s = s2({}, h22.__s)), s2(h22.__s, T22.getDerivedStateFromProps(g22, h22.__s))), y = h22.props, _22 = h22.state, v22)
+          null == T22.getDerivedStateFromProps && null != h22.componentWillMount && h22.componentWillMount(), null != h22.componentDidMount && h22.__h.push(h22.componentDidMount);
         else {
-          if (null == H22.getDerivedStateFromProps && g22 !== y && null != h22.componentWillReceiveProps && h22.componentWillReceiveProps(g22, x), !h22.__e && null != h22.shouldComponentUpdate && false === h22.shouldComponentUpdate(g22, h22.__s, x) || u22.__v === i22.__v) {
-            h22.props = g22, h22.state = h22.__s, u22.__v !== i22.__v && (h22.__d = false), h22.__v = u22, u22.__e = i22.__e, u22.__k = i22.__k, u22.__k.forEach(function(n3) {
+          if (null == T22.getDerivedStateFromProps && g22 !== y && null != h22.componentWillReceiveProps && h22.componentWillReceiveProps(g22, x), !h22.__e && null != h22.shouldComponentUpdate && false === h22.shouldComponentUpdate(g22, h22.__s, x) || u22.__v === i22.__v) {
+            for (h22.props = g22, h22.state = h22.__s, u22.__v !== i22.__v && (h22.__d = false), h22.__v = u22, u22.__e = i22.__e, u22.__k = i22.__k, u22.__k.forEach(function(n3) {
               n3 && (n3.__ = u22);
-            }), h22.__h.length && f22.push(h22);
+            }), A22 = 0; A22 < h22._sb.length; A22++)
+              h22.__h.push(h22._sb[A22]);
+            h22._sb = [], h22.__h.length && f22.push(h22);
             break n;
           }
           null != h22.componentWillUpdate && h22.componentWillUpdate(g22, h22.__s, x), null != h22.componentDidUpdate && h22.__h.push(function() {
             h22.componentDidUpdate(y, _22, k22);
           });
         }
-        if (h22.context = x, h22.props = g22, h22.__v = u22, h22.__P = n22, A22 = l2.__r, C22 = 0, "prototype" in H22 && H22.prototype.render)
-          h22.state = h22.__s, h22.__d = false, A22 && A22(u22), a22 = h22.render(h22.props, h22.state, h22.context);
-        else
+        if (h22.context = x, h22.props = g22, h22.__v = u22, h22.__P = n22, C22 = l2.__r, $22 = 0, "prototype" in T22 && T22.prototype.render) {
+          for (h22.state = h22.__s, h22.__d = false, C22 && C22(u22), a22 = h22.render(h22.props, h22.state, h22.context), H22 = 0; H22 < h22._sb.length; H22++)
+            h22.__h.push(h22._sb[H22]);
+          h22._sb = [];
+        } else
           do {
-            h22.__d = false, A22 && A22(u22), a22 = h22.render(h22.props, h22.state, h22.context), h22.state = h22.__s;
-          } while (h22.__d && ++C22 < 25);
-        h22.state = h22.__s, null != h22.getChildContext && (t22 = s2(s2({}, t22), h22.getChildContext())), v22 || null == h22.getSnapshotBeforeUpdate || (k22 = h22.getSnapshotBeforeUpdate(y, _22)), $22 = null != a22 && a22.type === p2 && null == a22.key ? a22.props.children : a22, w2(n22, Array.isArray($22) ? $22 : [$22], u22, i22, t22, o22, r22, f22, e22, c22), h22.base = u22.__e, u22.__h = null, h22.__h.length && f22.push(h22), b22 && (h22.__E = h22.__ = null), h22.__e = false;
+            h22.__d = false, C22 && C22(u22), a22 = h22.render(h22.props, h22.state, h22.context), h22.state = h22.__s;
+          } while (h22.__d && ++$22 < 25);
+        h22.state = h22.__s, null != h22.getChildContext && (t22 = s2(s2({}, t22), h22.getChildContext())), v22 || null == h22.getSnapshotBeforeUpdate || (k22 = h22.getSnapshotBeforeUpdate(y, _22)), I22 = null != a22 && a22.type === p2 && null == a22.key ? a22.props.children : a22, w2(n22, Array.isArray(I22) ? I22 : [I22], u22, i22, t22, o22, r22, f22, e22, c22), h22.base = u22.__e, u22.__h = null, h22.__h.length && f22.push(h22), b22 && (h22.__E = h22.__ = null), h22.__e = false;
       } else
         null == r22 && u22.__v === i22.__v ? (u22.__k = i22.__k, u22.__e = i22.__e) : u22.__e = L2(i22.__e, u22, i22, t22, o22, r22, f22, c22);
     (a22 = l2.diffed) && a22(u22);
@@ -540,7 +548,7 @@ function N2(n22, u22, i22) {
   }
   if (t22 = n22.__k)
     for (o22 = 0; o22 < t22.length; o22++)
-      t22[o22] && N2(t22[o22], u22, "function" != typeof n22.type);
+      t22[o22] && N2(t22[o22], u22, i22 || "function" != typeof n22.type);
   i22 || null == n22.__e || a2(n22.__e), n22.__ = n22.__e = n22.__d = void 0;
 }
 function O2(n22, l22, u22) {
@@ -560,13 +568,13 @@ n2 = e2.slice, l2 = { __e: function(n22, l22, u22, i22) {
   return null != n22 && void 0 === n22.constructor;
 }, d2.prototype.setState = function(n22, l22) {
   var u22;
-  u22 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = s2({}, this.state), "function" == typeof n22 && (n22 = n22(s2({}, u22), this.props)), n22 && s2(u22, n22), null != n22 && this.__v && (l22 && this.__h.push(l22), b2(this));
+  u22 = null != this.__s && this.__s !== this.state ? this.__s : this.__s = s2({}, this.state), "function" == typeof n22 && (n22 = n22(s2({}, u22), this.props)), n22 && s2(u22, n22), null != n22 && this.__v && (l22 && this._sb.push(l22), b2(this));
 }, d2.prototype.forceUpdate = function(n22) {
   this.__v && (this.__e = true, n22 && this.__h.push(n22), b2(this));
 }, d2.prototype.render = p2, t2 = [], g2.__r = 0, r2 = 0;
 var App = () => {
-  return /* @__PURE__ */ h2(p2, null, "Hi there! I'm Sous.", /* @__PURE__ */ h2("button", {
-    onClick: () => console.log("wosdfaeo!!!!")
+  return /* @__PURE__ */ h2(p2, null, "Hi there, I'm Sous.", /* @__PURE__ */ h2("button", {
+    onClick: () => console.log("test11!!!!")
   }, "Server stuff here!"));
 };
 
