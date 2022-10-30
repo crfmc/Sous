@@ -310,8 +310,8 @@ n = e.slice, l = { __e: function(n2, l2, u2, i2) {
 // scripts/App.jsx
 var App = () => {
   return /* @__PURE__ */ h(p, null, "Hi there, I'm Sous.", /* @__PURE__ */ h("button", {
-    onClick: () => console.log("test11!!!!")
-  }, "Server stuff here!"));
+    onClick: () => console.log("This is working alright!!!!")
+  }, "Click me!"));
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

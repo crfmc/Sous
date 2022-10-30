@@ -1,6 +1,6 @@
 const { h, Component } = require('preact');
 
-export default class NightModeButton extends Component {
+class NightModeButton extends Component {
   constructor() {
     super();
   }

@@ -285,8 +285,8 @@ n = e.slice, l = { __e: function(n2, l2, u2, i2) {
 // ../server/scripts/App.jsx
 var App = () => {
   return /* @__PURE__ */ h(p, null, "Hi there, I'm Sous.", /* @__PURE__ */ h("button", {
-    onClick: () => console.log("test11!!!!")
-  }, "Server stuff here!"));
+    onClick: () => console.log("This is working alright!!!!")
+  }, "Click me!"));
 };
 export {
   App

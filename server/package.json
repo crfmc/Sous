@@ -6,9 +6,9 @@
   "scripts": {
     "esbuild-server": "node esbuild-server.config.js",
     "esbuild-client": "npm --prefix ../client run build",
-    "nodemon": "nodemon --watch ./scripts/* server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npm run esbuild-client && npm run esbuild-server && npm run nodemon"
+    "build": "npm run esbuild-client && npm run esbuild-server",
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",

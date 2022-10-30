@@ -574,8 +574,8 @@ n2 = e2.slice, l2 = { __e: function(n22, l22, u22, i22) {
 }, d2.prototype.render = p2, t2 = [], g2.__r = 0, r2 = 0;
 var App = () => {
   return /* @__PURE__ */ h2(p2, null, "Hi there, I'm Sous.", /* @__PURE__ */ h2("button", {
-    onClick: () => console.log("test11!!!!")
-  }, "Server stuff here!"));
+    onClick: () => console.log("This is working alright!!!!")
+  }, "Click me!"));
 };
 
 // src/hydrate.jsx
