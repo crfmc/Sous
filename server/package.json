@@ -20,7 +20,10 @@
     "isomorphic-fetch": "^3.0.0",
     "nodemon": "^2.0.19",
     "path": "^0.12.7",
-    "preact": "^10.11.0",
+    "preact": "^10.11.2",
+    "preact-render-to-string": "^5.2.4",
+    "react": "npm:@preact/compat@^17.1.2",
+    "react-dom": "npm:@preact/compat@^17.1.2",
     "sass": "^1.54.4"
   },
   "devDependencies": {
