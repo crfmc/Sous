@@ -3,15 +3,24 @@ import { h, Fragment } from 'preact';
 
 // import Inventory from "inventory"
 
-// const { App2 } = require('./components/App2');
+import App2 from './components/App2';
+import NightModeButton from './components/NightModeButton';
 
+import 'preact/debug';
+import { useState } from 'preact/hooks/src';
+
+const greeting = "Hi there, I'm Sous.";
+
+// const [cGreet, setCGreet] = useState()
+
+console.log(useState());
 
 export const App = () => {
     return (
-        <Fragment>
-            Hi there, I'm Sous.
+        <div>
+            { greeting }
             <button onClick={() => console.log('This is working alright!!!!')}>Click me!</button>
-            {/* <App2 /> */}
-        </Fragment>
+            <App2 />
+        </div>
     )
 }
