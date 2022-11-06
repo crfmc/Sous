@@ -27,7 +27,6 @@ app.get('/', (req, res) => {
 
 // Inventory
 app.get('/inventory', (req, res) => {
-  // res.sendStatus(200);
   res.sendFile(path.join(public, 'inventory.html'));
 });
 
